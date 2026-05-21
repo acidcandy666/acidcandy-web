@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { background: #050505; color: #fff; font-family: 'Courier New', monospace; margin: 0; }
+        .top-bar { border-bottom: 2px solid #ff00ff; padding: 20px 50px; display: flex; justify-content: space-between; background: #000; }
+        .top-bar h1 { color: #ff00ff; margin: 0; text-shadow: 0 0 10px #ff00ff; }
+        
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); /* Genau 3 Spalten */
+            gap: 20px; 
+            padding: 40px; 
+            max-width: 1200px; 
+            margin: auto;
+        }
+        
+        .news-card { 
+            background: #111; border: 1px solid #333; transition: 0.3s; 
+            text-decoration: none; color: #fff; display: flex; flex-direction: column; 
+        }
+        .news-card:hover { border-color: #00f2ff; box-shadow: 0 0 15px rgba(0,242,255,0.2); }
+        .img-box { height: 160px; background-size: cover; background-position: center; border-bottom: 2px solid #00f2ff; }
+        .content { padding: 15px; }
+        .tag { font-size: 0.7em; color: #ff00ff; border: 1px solid #ff00ff; padding: 2px 5px; margin-bottom: 8px; display: inline-block; }
+        h3 { margin: 5px 0 0 0; font-size: 1em; }
+    </style>
+</head>
+<body>
+    <nav class="top-bar">
+        <h1>AcidCandy.de</h1>
+        <div style="color: #00f2ff;">tox@Toxic666:~/nanoclaw$ fetch_news --count 9</div>
+    </nav>
+
+    <main class="grid-container" id="news-feed"></main>
+
+   <script>
+        async function loadNews() {
+            try {
+                const response = await fetch('data/news.json');
+                const news = await response.json(); // 'news' ist jetzt direkt das Array mit den Artikeln
+
+                const newsFeed = document.getElementById('news-feed');
+                newsFeed.innerHTML = news.map(n => `
+                    <a href="${n.link}" target="_blank" class="news-card">
+                        <div class="img-box" style="background-image: url('${n.img}');"></div>
+                        <div class="content">
+                            <div class="tag">${n.source}</div>
+                            <h3>${n.title}</h3>
+                        </div>
+                    </a>
+                `).join('');
+            } catch (error) {
+                document.getElementById('news-feed').innerHTML = "<p>Fehler beim Laden der News.</p>";
+            }
+        }
+        loadNews();
+    </script>

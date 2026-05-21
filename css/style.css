@@ -1,0 +1,4 @@
+body { background: #050505; color: #00f2ff; font-family: 'Courier New', monospace; margin: 0; }
+.top-bar { border-bottom: 2px solid #ff00ff; padding: 20px; display: flex; justify-content: space-between; text-shadow: 0 0 10px #ff00ff; }
+.grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); padding: 20px; gap: 20px; }
+.news-card { background: rgba(20, 20, 20, 0.8); border: 1px solid #00f2ff; padding: 15px; box-shadow: 0 0 10px rgba(0, 242, 255, 0.2); }
