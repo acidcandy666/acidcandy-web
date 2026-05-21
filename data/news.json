@@ -1,1 +1,38 @@
-[{"title":"Grüne fordern Nachtverbot für Mähroboter zum Schutz von Igeln","link":"https://www.mobiflip.de/gruene-fordern-nachtverbot-fuer-maehroboter-zum-schutz-von-igeln/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"},{"title":"FRITZ! startet neues Labor für FRITZ!OS 8.50","link":"https://www.mobiflip.de/fritz-startet-neues-labor-fuer-fritzos-8-50/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"},{"title":"Lufthansa dominiert das Airline Ranking in Deutschland","link":"https://www.mobiflip.de/lufthansa-dominiert-das-airline-ranking-in-deutschland/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"},{"title":"IKEA führt wöchentliche „Stille Stunde“ in allen Einrichtungshäusern ein","link":"https://www.mobiflip.de/ikea-fuehrt-woechentliche-stille-stunde-in-allen-einrichtungshaeusern-ein/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"},{"title":"Polestar setzt auch auf mehr Knöpfe im Auto","link":"https://www.mobiflip.de/polestar-setzt-auch-auf-mehr-knoepfe-im-auto/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"},{"title":"Hyundai Ioniq 1 und Kia EV1 kommen ab 2028","link":"https://www.mobiflip.de/hyundai-ioniq-1-und-kia-ev1-kommen-ab-2028/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"},{"title":"Senioren müssen ihren Ausweis bald nicht mehr erneuern","link":"https://www.mobiflip.de/senioren-muessen-ihren-ausweis-bald-nicht-mehr-erneuern/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"},{"title":"VW ID.3 GTI: Volkswagen plant neues Elektroauto für 2026","link":"https://www.mobiflip.de/vw-id-3-gti-volkswagen-plant-neues-elektroauto-fuer-2026/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"},{"title":"Ubisoft in der Krise: Bis 2028 sieht es düster aus","link":"https://www.mobiflip.de/ubisoft-in-der-krise-bis-2028-sieht-es-duester-aus/","img":"https://via.placeholder.com/300x160","source":"Mobiflip"}]
+[
+  {
+    "source": "Golem",
+    "title": "Zwischen Assembler und Altpapier: Warum nicht die Sprache das Problem der Voyager-Sonden ist",
+    "link": "https://www.golem.de/news/zwischen-assembler-und-altpapier-warum-nicht-die-sprache-das-problem-der-voyager-sonden-ist-2605-208807.html",
+    "img": "assets/default.jpg"
+  },
+  {
+    "source": "Golem",
+    "title": "(g+) Adaptive Interfaces: Wenn Software ihre Oberfl�che selbst optimiert",
+    "link": "https://www.golem.de/news/adaptive-interfaces-wenn-software-ihre-oberflaeche-selbst-optimiert-2605-208907.html",
+    "img": "assets/default.jpg"
+  },
+  {
+    "source": "Golem",
+    "title": "Golem Karrierewelt: Heute im Podcast: Microsoft Copilot - erst planen, dann aktivieren",
+    "link": "https://www.golem.de/news/golem-karrierewelt-heute-im-podcast-microsoft-copilot-erst-planen-dann-aktivieren-2605-208680.html",
+    "img": "assets/default.jpg"
+  },
+  {
+    "source": "Mobiflip",
+    "title": "congstar bietet Rabattaktion für Ehrenamtliche an",
+    "link": "https://www.mobiflip.de/congstar-bietet-rabattaktion-fuer-ehrenamtliche-an/",
+    "img": "assets/default.jpg"
+  },
+  {
+    "source": "Mobiflip",
+    "title": "Grüne fordern Nachtverbot für Mähroboter zum Schutz von Igeln",
+    "link": "https://www.mobiflip.de/gruene-fordern-nachtverbot-fuer-maehroboter-zum-schutz-von-igeln/",
+    "img": "assets/default.jpg"
+  },
+  {
+    "source": "Mobiflip",
+    "title": "FRITZ! startet neues Labor für FRITZ!OS 8.50",
+    "link": "https://www.mobiflip.de/fritz-startet-neues-labor-fuer-fritzos-8-50/",
+    "img": "assets/default.jpg"
+  }
+]
