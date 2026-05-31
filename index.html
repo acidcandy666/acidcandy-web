@@ -1,59 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        body { background: #050505; color: #fff; font-family: 'Courier New', monospace; margin: 0; }
-        .top-bar { border-bottom: 2px solid #ff00ff; padding: 20px 50px; display: flex; justify-content: space-between; background: #000; }
-        .top-bar h1 { color: #ff00ff; margin: 0; text-shadow: 0 0 10px #ff00ff; }
-        
-        .grid-container { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); /* Genau 3 Spalten */
-            gap: 20px; 
-            padding: 40px; 
-            max-width: 1200px; 
-            margin: auto;
-        }
-        
-        .news-card { 
-            background: #111; border: 1px solid #333; transition: 0.3s; 
-            text-decoration: none; color: #fff; display: flex; flex-direction: column; 
-        }
-        .news-card:hover { border-color: #00f2ff; box-shadow: 0 0 15px rgba(0,242,255,0.2); }
-        .img-box { height: 160px; background-size: cover; background-position: center; border-bottom: 2px solid #00f2ff; }
-        .content { padding: 15px; }
-        .tag { font-size: 0.7em; color: #ff00ff; border: 1px solid #ff00ff; padding: 2px 5px; margin-bottom: 8px; display: inline-block; }
-        h3 { margin: 5px 0 0 0; font-size: 1em; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AcidCandy.de — Dieter / NanoClaw / NEO</title>
+  <meta name="description" content="AcidCandy.de — Dieter, NanoClaw V2, NEO Super Brain, lokale KI-Runtime." />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav class="top-bar">
-        <h1>AcidCandy.de</h1>
-        <div style="color: #00f2ff;">tox@Toxic666:~/nanoclaw$ fetch_news --count 9</div>
-    </nav>
+  <div class="scanlines"></div>
 
-    <main class="grid-container" id="news-feed"></main>
+  <header class="topbar">
+    <div class="brand">AcidCandy.de</div>
+    <div class="terminal">tox@Toxic666:~/nanoclaw$ neo status</div>
+  </header>
 
-   <script>
-        async function loadNews() {
-            try {
-                const response = await fetch('data/news.json');
-                const news = await response.json(); // 'news' ist jetzt direkt das Array mit den Artikeln
+  <main class="shell">
+    <section class="hero panel glow">
+      <p class="eyebrow">Local AI Runtime · Cyberpunk Lab · Windows + WSL</p>
+      <h1>Dieter baut NEO.</h1>
+      <p class="lead">
+        NEO ist der kleine Bruder von J.A.R.V.I.S.: ein lokaler Assistent für Projekte,
+        Wissen, Planung, Automatisierung und kreative Arbeit — mit klaren Grenzen und Freigabe-Regeln.
+      </p>
 
-                const newsFeed = document.getElementById('news-feed');
-                newsFeed.innerHTML = news.map(n => `
-                    <a href="${n.link}" target="_blank" class="news-card">
-                        <div class="img-box" style="background-image: url('${n.img}');"></div>
-                        <div class="content">
-                            <div class="tag">${n.source}</div>
-                            <h3>${n.title}</h3>
-                        </div>
-                    </a>
-                `).join('');
-            } catch (error) {
-                document.getElementById('news-feed').innerHTML = "<p>Fehler beim Laden der News.</p>";
-            }
-        }
-        loadNews();
-    </script>
+      <div class="actions">
+        <a href="https://github.com/acidcandy666" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/acidcandy666/acidcandy-web" target="_blank" rel="noreferrer">Website Repo</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <span class="tag">PROJECT</span>
+        <h2>NanoClaw V2</h2>
+        <p>Lokale Runtime-Agenten-Plattform mit WebUI, Planner, Memory, Wiki, Voice und Mobile-Anbindung.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">BRAIN</span>
+        <h2>NEO Super Brain</h2>
+        <p>Personal Memory, Semantic Memory, Project Context, Wiki, Live Knowledge und Knowledge Router.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">STACK</span>
+        <h2>Local First</h2>
+        <p>Windows 11, WSL Ubuntu, Ollama, SQLite, Discord Voice, Martin TTS und RTX GPU-Beschleunigung.</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Aktueller Fokus</h2>
+      <div class="status-list">
+        <div><strong>01</strong><span>Knowledge Router V1 finalisieren</span></div>
+        <div><strong>02</strong><span>Project Context V2 verbessern</span></div>
+        <div><strong>03</strong><span>Live Knowledge V2 mit besserem Routing</span></div>
+        <div><strong>04</strong><span>Skill Layer für Mail, Social, Research und Builder vorbereiten</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Vision</h2>
+      <p>
+        NEO soll kein unkontrollierter Autopilot sein, sondern ein starker persönlicher Assistent:
+        lesen, analysieren, planen, entwerfen und ausführen — aber kritische Aktionen nur nach Freigabe.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>AcidCandy.de</span>
+    <span>NEO Runtime Lab</span>
+    <span>Local AI · 2026</span>
+  </footer>
+</body>
+</html>

@@ -1,4 +1,217 @@
-body { background: #050505; color: #00f2ff; font-family: 'Courier New', monospace; margin: 0; }
-.top-bar { border-bottom: 2px solid #ff00ff; padding: 20px; display: flex; justify-content: space-between; text-shadow: 0 0 10px #ff00ff; }
-.grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); padding: 20px; gap: 20px; }
-.news-card { background: rgba(20, 20, 20, 0.8); border: 1px solid #00f2ff; padding: 15px; box-shadow: 0 0 10px rgba(0, 242, 255, 0.2); }
+:root {
+  --bg: #050008;
+  --panel: #100915;
+  --panel-2: #15101d;
+  --text: #f7eaff;
+  --muted: #b99cc8;
+  --pink: #ff00ff;
+  --cyan: #00f7ff;
+  --purple: #8b5cf6;
+  --border: rgba(255, 0, 255, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 0, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(0, 247, 255, 0.12), transparent 35%),
+    linear-gradient(180deg, #020005, var(--bg));
+  font-family: "Courier New", monospace;
+}
+
+.scanlines {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.025),
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  opacity: 0.35;
+  z-index: 10;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 22px 44px;
+  border-bottom: 2px solid var(--border);
+}
+
+.brand {
+  color: var(--pink);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px var(--pink), 0 0 28px rgba(255, 0, 255, 0.8);
+}
+
+.terminal {
+  color: var(--cyan);
+  font-size: 14px;
+  text-shadow: 0 0 10px rgba(0, 247, 255, 0.9);
+}
+
+.shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 46px auto;
+}
+
+.panel,
+.card {
+  background: linear-gradient(180deg, rgba(21, 16, 29, 0.96), rgba(10, 6, 14, 0.96));
+  border: 1px solid var(--border);
+  box-shadow: 0 0 24px rgba(255, 0, 255, 0.12);
+}
+
+.hero {
+  padding: clamp(28px, 5vw, 56px);
+  margin-bottom: 24px;
+}
+
+.glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.16), transparent);
+  transform: translateX(-100%);
+  animation: sweep 6s infinite;
+}
+
+@keyframes sweep {
+  0% { transform: translateX(-100%); }
+  45%, 100% { transform: translateX(100%); }
+}
+
+.eyebrow,
+.tag {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 10px 0 18px;
+  font-size: clamp(42px, 8vw, 92px);
+  line-height: 0.95;
+  color: var(--text);
+  text-shadow: 0 0 18px rgba(255, 0, 255, 0.7);
+}
+
+h2 {
+  margin: 8px 0 12px;
+  color: #fff;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.lead {
+  max-width: 850px;
+  font-size: clamp(17px, 2vw, 22px);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.actions a {
+  color: #050008;
+  background: var(--cyan);
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 0 18px rgba(0, 247, 255, 0.45);
+}
+
+.actions a:first-child {
+  background: var(--pink);
+  color: #fff;
+  box-shadow: 0 0 18px rgba(255, 0, 255, 0.45);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.card {
+  padding: 24px;
+  min-height: 210px;
+}
+
+.card:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 28px rgba(0, 247, 255, 0.18);
+}
+
+.panel {
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.status-list {
+  display: grid;
+  gap: 12px;
+}
+
+.status-list div {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border-left: 3px solid var(--cyan);
+}
+
+.status-list strong {
+  color: var(--pink);
+  font-size: 20px;
+}
+
+footer {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto 34px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .topbar,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
