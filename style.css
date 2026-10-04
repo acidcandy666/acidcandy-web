@@ -159,3 +159,13 @@ footer{
   .links{flex-direction:column}
   .links a{text-align:center}
 }
+
+.games{margin-top:18px;padding:24px}
+.game-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.game{background:rgba(255,255,255,.03);border:1px solid rgba(0,234,255,.2);border-radius:16px;padding:12px}
+.game img,.game .ph{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px}
+.game .ph{display:flex;align-items:center;justify-content:center;background:rgba(139,92,246,.1);color:#7885bd;font-size:13px}
+.game h4{margin:12px 0 4px;font-size:18px}
+.game p{margin:0;color:#aeb9e8;font-size:14px;line-height:1.4}
+@media(max-width:880px){.game-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.game-grid{grid-template-columns:1fr}}
